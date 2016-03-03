@@ -1,0 +1,46 @@
+#NAME:	 WES_DRAW_UPENN
+#DESCRIPTION:	DRAW stands for DNA Resequencing Analysis Workflow.
+STEP: last_function
+STEPS: [bwa_mem_draw, picard_addReadsGroups_WES, picard_mark_duplicates, samtools_doFlagStat, GATK_countReads_WES, GATK_localRealignIndel_step1, GATK_localRealignIndel_step2, GATK_recal_countCovariates, GATK_recal_tableRecalibration, picard_meanQbycycle, picard_meanQScDis, picard_hsMetrics, picard_collectInsertSizeMetrics, GATK_target_coverage, GATK_genome_coverage, GATK_snpcal_unifiedGenotyper, GATK_variantFiltrationNoMask, GATK_variantEval, snpeff, last_function]
+QUEUE: all.q
+['cbd1']
+RAW_DATA_DIR: /home/hannah/Omics/WES
+FLAG_PATH: /home/hannah/Omics/WES
+LOG_PATH: :/home/hannah/Omics/WES
+QC_PATH: /home/hannah/Omics/WES
+RESULTS_PATH: /home/hannah/Omics/WES
+COMPRESSION: 'NONE'
+SCHEDULER: SGE
+RESOURCES: '-q all.q -l nodes=16:ppn=4 -l mem=5gb'
+DRMAA_PATH: /opt/sge/lib/lx-amd64/libdrmaa.so
+SUMATRA_DB_PATH: /mnt/data/genomics/draw-omics-cbd
+SUMATRA_RUN_NAME: default_sumatra_project
+GENOME: /mnt/data/NGS/REF/hg19/hg19.fasta
+MBQ: 20
+MMQ: 30
+SAMTOOLS_VERSION: 0.1.2
+BWA_OPTIONS: -t 2 -M
+BWA_INDEX: /mnt/data/genomics/hg19/hg19.fasta
+GATK_VERSION: 2.2.8
+OMNI: /mnt/data/NGS/REF/hg19/1000G_omni2.5.hg19.vcf
+HAPMAP: /mnt/data/NGS/REF/hg19/hapmap_3.3.hg19.vcf
+DBSNP: /mnt/data/NGS/REF/hg19/dbsnp_135.hg19.vcf
+MILLS: /mnt/data/NGS/REF/hg19/Mills_and_1000G_gold_standard.indels.hg19.vcf
+G1000: /mnt/data/NGS/REF/hg19/1000G_phase1.indels.hg19.vcf
+TARGET: /mnt/data/NGS/REF/hg19/targetregion_hg19_nimblegen_exome_v2.interval_list
+TARGET_FLANKS_FILE: /mnt/data/NGS/REF/hg19/targetregion_hg19_nimblegen_exome_v2.interval_list
+DBSNP_REF_INDELS: /mnt/data/NGS/REF/hg19/dbsnp_135.indels_only.hg19.vcf
+BWA_VERSION: 0.7.8
+MILLS_G1000: /mnt/data/NGS/REF/hg19/Mills_and_1000G_gold_standard.indels.hg19.vcf
+PICARD_VERSION: 1.113
+G1000_Indels: /mnt/data/NGS/REF/hg19/1000G_phase1.indels.hg19.vcf
+PIPE_MULTIPROCESS: 1000
+PIPE_REBUILD: 'True'
+PIPE_VERBOSE: 5
+RESULTS_EMAIL: hanjl@mail.med.upenn.edu
+USERNAME: hannah
+WORKING_DIR: /home/hannah/omics_sge/omics_pipe/omics_pipe/scripts
+BWA_RESULTS: /mnt/data/genomics/draw-omics-cbd34567
+RG_STR: '@RG	ID:cbd1	SM:cbd1	PL:Illumina	PU:NA	LB:nimblegen	DS:2x100	CN:CBD	DT:2015-05-14'
+RG_STR_PICARD: 'ID=cbd1 SM=cbd1 PL=Illumina PU=NA LB=nimblegen DS=2x100 CN=CBD'
+ENDS: PE
