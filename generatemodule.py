@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """OmicsPipe API application.
-   generatemodule.py get -r <pipelinerecipesid> -s <stepsid> -f <userfilesid> -o <resultfilename> -t <apitoken> > <custom_module_name>.py
+   generatemodule.py get -r <pipelinerecipesid> -s <stepsid> -f <userfilesid> -o <resultfilename> -a <apitoken> > <custom_module_name>.py
 
 Usage:
-  generatemodule.py get -r <pipelinerecipesid> -s <stepsid> -f <userfilesid> -o <resultfilename> -t <apitoken>
+  generatemodule.py get -r <pipelinerecipesid> -s <stepsid> -f <userfilesid> -o <resultfilename> -a <apitoken>
   generatemodule.py (-h | --help)
   generatemodule.py (-v | --version)
 
@@ -12,7 +12,7 @@ Options:
   -s --stepsid <stepsid> input stepid id
   -f --userfilesid <userfilesid> show userfile id
   -o --resultfilename <resultfilename> input resultfile name that inclued file type
-  -t --apitoken <apitoken> input api token
+  -a --apitoken <apitoken> input api token
   -h --help     show this screen
   -v --version     show version and exit
 """

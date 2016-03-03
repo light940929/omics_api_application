@@ -1,17 +1,17 @@
 #!/usr/bin/env python
 """OmicsPipe API application.
-   linkmodule.py get -r <pipelinerecipesid> -s <stepgroupsid> -t <apitoken> > <custom_script_name>.py
+   linkmodule.py get -r <pipelinerecipesid> -s <stepgroupsid> -a <apitoken> > <custom_script_name>.py
    for example on AWS ~/.local/bin/omics_pipe custom --custom_script_path /home/sgeadmin/omics_sge/omics_pipe/omics_pipe/ --custom_script_name WES_DRAW_OneStepTest /home/sgeadmin/omics_sge/omics_pipe/tests/test_params_WES_GATK_hannah.yaml
 
 Usage:
-  linkmodule.py get -r <pipelinerecipesid> -s <stepgroupsid> -t <apitoken>
+  linkmodule.py get -r <pipelinerecipesid> -s <stepgroupsid> -a <apitoken>
   linkmodule.py (-h | --help)
   linkmodule.py (-v | --version)
 
 Options:
   -r --pipelinerecipesid <pipelinerecipesid> input pipelinerecipe id
   -s --stepgroupsid <stepgroupsid> input stepgroups id
-  -t --apitoken <apitoken> input api token
+  -a --apitoken <apitoken> input api token
   -h --help     show this screen
   -v --version     show version and exit
 """

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """OmicsPipe API application for choosing our standard pipeline and template to build a new template.
-   buildtemplate.py get -p <pipelinesid> -i <ingredientgroupsid> -t <templatesid>  -u <username> -e <useremail> -t <apitoken> > <templatename>.yaml
+   buildtemplate.py get -p <pipelinesid> -i <ingredientgroupsid> -t <templatesid>  -u <username> -e <useremail> -a <apitoken> > <templatename>.yaml
 
 Usage:
-  buildtemplate.py get -p <pipelinesid> -i <ingredientgroupsid> -t <templatesid>  -u <username> -e <useremail> -t <apitoken>
+  buildtemplate.py get -p <pipelinesid> -i <ingredientgroupsid> -t <templatesid>  -u <username> -e <useremail> -a <apitoken>
   buildtemplate.py (-h | --help)
   buildtemplate.py (-v | --version)
 
@@ -13,7 +13,7 @@ Options:
   -t --templatesid <templatesid> input template id
   -u --username <username> input user name
   -e --useremail <useremail> input user email
-  -t --apitoken <apitoken> input api token
+  -a --apitoken <apitoken> input api token
   -h --help     show this screen
   -v --version     show version and exit
 """
