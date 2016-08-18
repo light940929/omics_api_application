@@ -133,6 +133,8 @@ def  checkElements(data_elements, template_id):
 
 def  checkEnvironment():
      #SERVER_ENV
+     print "REPOSITORY: https://kfisch@bitbucket.org/sulab/omics_pipe"
+     print "HG_USERNAME: Kathleen Fisch <kfisch@scripps.edu>"
      print "PIPE_MULTIPROCESS: 1000"
      print "PIPE_REBUILD: 'True'"
      print "PIPE_VERBOSE: 5"
