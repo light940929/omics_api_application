@@ -29,7 +29,7 @@ url_stepgroups = 'http://aws1niagads.org:8000/stepgroups/' + arguments['--stepgr
 url_steps = 'http://aws1niagads.org:8000/steps/'
 url_pipelinerecipes = 'http://aws1niagads.org:8000/pipelinerecipes/' + arguments['--pipelinerecipesid']
 token = arguments['--apitoken']
-headers = {'Authorization': '%s' % token}
+headers = {'Authorization': 'Bearer %s' % token}
 request_stepgroups = Request(url_stepgroups, headers=headers)
 request_steps = Request(url_steps, headers=headers)
 request_pipelinerecipes = Request(url_pipelinerecipes, headers=headers)

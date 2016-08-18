@@ -27,12 +27,13 @@ from docopt import docopt
 from urllib2 import urlopen, Request
 
 arguments = docopt(__doc__, version='0.0.2alpha')
+
 url_pipelines = 'http://aws1niagads.org:8000/pipelines/' + arguments['--pipelinesid']
 url_ingredients = 'http://aws1niagads.org:8000/ingredients/'
 url_templates = 'http://aws1niagads.org:8000/templates/' + arguments['--templatesid']
 url_elements = 'http://aws1niagads.org:8000/elements/'
 token = arguments['--apitoken']
-headers = {'Authorization': '%s' % token}
+headers = {'Authorization': 'Bearer %s' % token}
 request_pipelines = Request(url_pipelines, headers=headers)
 request_ingredients = Request(url_ingredients, headers=headers)
 request_templates = Request(url_templates, headers=headers)
@@ -107,7 +108,7 @@ def  checkIngredients(data_ingredients):
                  sumatra_db_path = "SUMATRA_DB_PATH: /home/hanjl/Omics/WES"
                  drmaa_path = "DRMAA_PATH: /home/hanjl/lib/libdrmaa.so"
               print queue
-              print sample_list
+              print "SAMPLE_LIST: " +  str(sample_list)
               print "RAW_DATA_DIR: " + defaultdir
               print "FLAG_PATH: " + defaultdir
               print "LOG_PATH: :" + defaultdir

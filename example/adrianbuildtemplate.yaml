@@ -1,0 +1,30 @@
+#NAME:	R_Alex
+#DESCRIPTION:	Gene expression with DESeq2
+STEP: last_function
+STEPS: [58, last_function]
+QUEUE: all.q
+SAMPLE_LIST: ['kgXref']
+RAW_DATA_DIR: /home/adrian/R_Alex
+FLAG_PATH: /home/adrian/R_Alex
+LOG_PATH: :/home/adrian/R_Alex
+QC_PATH: /home/adrian/R_Alex
+RESULTS_PATH: /home/adrian/R_Alex
+COMPRESSION: 'NONE'
+SCHEDULER: SGE
+RESOURCES: '-q all.q -l nodes=16:ppn=4 -l mem=5gb'
+DRMAA_PATH: /opt/sge/lib/lx-amd64/libdrmaa.so
+SUMATRA_DB_PATH: /mnt/data/genomics/draw-omics-cbd
+SUMATRA_RUN_NAME: default_sumatra_project
+R_HOME: /home/adrian/R-devel/bin
+PKG_CONFIG_PATH: /home/adrian/usr/local/lib/pkgconfig
+LD_LIBRARY_PATH: /home/adrian/usr/local/lib
+PIPE_MULTIPROCESS: 1000
+PIPE_REBUILD: 'True'
+PIPE_VERBOSE: 5
+RESULTS_EMAIL: hanjl@mail.med.upenn.edu
+USERNAME: hanjl
+WORKING_DIR: /home/hannah/omics_sge/omics_pipe/omics_pipe/scripts
+BWA_RESULTS: /mnt/data/genomics/draw-omics-cbd34567
+RG_STR: '@RG	ID:cbd1	SM:cbd1	PL:Illumina	PU:NA	LB:nimblegen	DS:2x100	CN:CBD	DT:2015-05-14'
+RG_STR_PICARD: 'ID=cbd1 SM=cbd1 PL=Illumina PU=NA LB=nimblegen DS=2x100 CN=CBD'
+ENDS: PE

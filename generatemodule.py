@@ -33,7 +33,7 @@ url_userfiles = 'http://aws1niagads.org:8000/userfiles/' + arguments['--userfile
 url_modules = 'http://aws1niagads.org:8000/modules/'
 url_pipelinerecipes = 'http://aws1niagads.org:8000/pipelinerecipes/' + arguments['--pipelinerecipesid'] #2
 token = arguments['--apitoken']
-headers = {'Authorization': '%s' % token}
+headers = {'Authorization': 'Bearer %s' % token}
 request_steps = Request(url_steps, headers=headers)
 request_userfiles = Request(url_userfiles, headers=headers)
 request_modules = Request(url_modules, headers=headers)
